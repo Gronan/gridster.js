@@ -794,13 +794,6 @@
     */
     fn.add_to_gridmap = function(grid_data, value) {
         this.update_widget_position(grid_data, value || grid_data.el);
-
-        if (grid_data.el) {
-            var $widgets = this.widgets_below(grid_data.el);
-            $widgets.each($.proxy(function(i, widget) {
-                this.move_widget_up( $(widget));
-            }, this));
-        }
     };
 
 
